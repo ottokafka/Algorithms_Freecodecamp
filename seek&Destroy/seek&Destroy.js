@@ -15,10 +15,14 @@ function destroyer(arr) {
         var argumentHolderIncrementing = arguments[i];
         console.log(argumentHolderIncrementing); // 2, 3
 
-        var removeWithIndexOf = argumentHolder.indexOf(argumentHolderIncrementing, 1);
-        console.log(removeWithIndexOf);
+for(var j = 0; j < arguments.length; j++){
+
+    var removeWithIndexOf = argumentHolder.indexOf(argumentHolderIncrementing, 0);
+    console.log(removeWithIndexOf);
+}
+
     }
-    return arr;
+    return removeWithIndexOf;
 }
 
 destroyer([1, 2, 3, 1, 2, 3], 2, 3);
