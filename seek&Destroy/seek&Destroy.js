@@ -27,6 +27,7 @@ for(var j = 0; j < arguments.length; j++){
 }
 
     }
+    console.log("the final product is: " + argumentHolder);
     return argumentHolder;
 }
 
