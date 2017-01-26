@@ -13,16 +13,21 @@ function destroyer(arr) {
     for(var i = 0; i < arguments.length; i++) {
 
         var argumentHolderIncrementing = arguments[i];
-        console.log(argumentHolderIncrementing); // 2, 3
+        console.log("incrementing argument: "+argumentHolderIncrementing); // 2, 3
 
 for(var j = 0; j < arguments.length; j++){
 
-    var removeWithIndexOf = argumentHolder.indexOf(argumentHolderIncrementing, 0);
-    console.log(removeWithIndexOf);
+    var removeWithIndexOf = argumentHolder.indexOf(argumentHolderIncrementing);
+    console.log("remove with Index "+removeWithIndexOf);
+
+    if(removeWithIndexOf >= 0){
+        argumentHolder.splice(removeWithIndexOf, 1);
+        console.log("the array is now "+argumentHolder);
+    }
 }
 
     }
-    return removeWithIndexOf;
+    return argumentHolder;
 }
 
 destroyer([1, 2, 3, 1, 2, 3], 2, 3);
