@@ -8,6 +8,8 @@ var arrayOfNumbers = arr;
     console.log(arrayOfNumbers);
 
     var max = Math.max(...arrayOfNumbers);
+    //here I using a spread operator ... where a argument is expected
+    //I could use Math.max.apply(null,arrayOfNumber) to accomplish the same thing
     console.log(max);
 
     var min = Math.min(...arrayOfNumbers);
