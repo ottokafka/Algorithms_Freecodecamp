@@ -1,25 +1,28 @@
 /**
  * Created by auto2 on 11/30/2016.
  */
-function sumAllNumbers(arr){
-    var smallest = 0;
-    var biggest = 1;
 
-    if (arr[0] < arr[1]){
-        smallest = arr[0];
-        biggest = arr[1];
-    }else{
-        smallest = arr[1];
-        biggest = arr[0];
-    }
-    return sumRange(smallest, biggest);
-}
-function sumRange(from, to){
-    var result = 0;
+function sumAll(arr) {
 
-    for(var i = from; i <= to; i++){
-        result = result + i;
+var arrayOfNumbers = arr;
+    console.log(arrayOfNumbers);
+
+    var max = Math.max(...arrayOfNumbers);
+    console.log(max);
+
+    var min = Math.min(...arrayOfNumbers);
+    console.log(min);
+
+    var factorialize = min;
+
+    for(var i = min; i < max; i++){
+        factorialize = factorialize + (i+1);
     }
-    return result;
+    console.log(factorialize);
+
+    return factorialize;
 }
-sumAllNumbers([2,4])
+
+sumAll([10, 5]); //1+2+3+4 = 10
+//This is expecting 10
+
