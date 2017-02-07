@@ -5,20 +5,24 @@
 function uniteUnique(arr){
 
     //Array.from looks into the entire array
-    var arrayFrom = Array.from(arguments);
-    console.log(arr); //[ 1, 3, 2 ] can only see this
-    console.log(arrayFrom); //[ [ 1, 3, 2 ], [ 5, 2, 1, 4 ], [ 2, 1 ] ] can see it all
+    // argument is a object argument[0] argument[1]
 
-    //reduce the array and concatenate the array
-    var reduceTheArray = arrayFrom.reduce(function(a, b) {
-        return a.concat(b);
-    });
 
-//
-   var unique = Array.from(new Set(reduceTheArray));
+    var args = arguments;
+    console.log(args);
+
+   var unique = Array.from(new Set(args));
     console.log(unique);
 
-    return unique; //final product
+    var reduceIt = unique.reduce(function(a, b){
+
+        return a.concat(b);
+    });
+    console.log(reduceIt);
+
+    let uniqueValues = [...new Set(reduceIt)];
+    console.log(uniqueValues);
+    return uniqueValues; //final product
 
 }
 uniteUnique([1, 3, 2], [5, 2, 1, 4], [2, 1]);
