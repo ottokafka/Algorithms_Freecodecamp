@@ -14,6 +14,7 @@ function myReplace(str, before, after) {
     if (ascii == 115) {
 
         let splitArrayAfterToCapitalize = after.split("");
+
         let string2Uppercase = splitArrayAfterToCapitalize.toString().charAt(0).toLowerCase() + splitArrayAfterToCapitalize.slice(1).join("");
 
         let replaceMethod2 = str.replace(before, string2Uppercase);
