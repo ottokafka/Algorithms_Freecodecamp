@@ -14,8 +14,12 @@ function diffArray(arr1, arr2) {
 
     // empty array to hold the new array
 
-    for(i = 0; i < arr1Length; i++){
-        var arr2IndexOf = arr2.indexOf(arr1[i]);
+    //var array = [2,4,6]
+    //array.indexOf(2) == 0
+    //array.indexOf(1, 4) == 0
+
+    for(i = 0; i < arr1Length; i++){ //arr1Length 4
+        var arr2IndexOf = arr2.indexOf(arr1[i]); //
 
         if(arr2IndexOf == -1){
             //console.log(arr2IndexOf); // -1
